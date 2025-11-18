@@ -1,0 +1,203 @@
+body {
+    background-color: #f0f0f0; /* Fundo Cinza Claro */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-start; /* Alinha ao topo, mas pode usar 'center' para centralizar verticalmente */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Limita a largura para melhor visualização em telas grandes */
+    text-align: center;
+}
+
+h1 {
+    color: #007bff; /* Letras Azuis */
+    margin-bottom: 20px;
+}
+
+/* --- Estilização dos Inputs e Botões --- */
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Garante responsividade */
+}
+
+#item-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #007bff; /* Letras Azuis no input */
+}
+
+/* Estilos de Botão Comuns */
+button {
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Previne que os botões encolham muito */
+}
+
+.green-btn {
+    background-color: #28a745; /* Botão Verde (Adicionar) */
+}
+
+.green-btn:hover {
+    background-color: #218838;
+}
+
+.orange-btn {
+    background-color: #ff9800; /* Botão Laranja (Limpar) */
+}
+
+.orange-btn:hover {
+    background-color: #e68900;
+}
+
+.remove-btn {
+    background-color: #dc3545; /* Botão Vermelho (Remover - dentro da tabela) */
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+}
+
+/* --- Estilização da Tabela --- */
+
+.table-container {
+    overflow-x: auto; /* Garante rolagem horizontal em telas pequenas */
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #007bff; /* Letras Azuis */
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+/* Estilo para item taxado */
+.completed {
+    text-decoration: line-through;
+    color: #6c757d; /* Cor mais suave para itens concluídos */
+}
+
+/* Alinhamento do Checkbox */
+input[type="checkbox"] {
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+.actions-section {
+    text-align: right;
+}
+
+/* --- Responsividade --- */
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .input-section {
+        flex-direction: column; /* Empilha input e botão em telas pequenas */
+    }
+
+    .input-section button, #item-input {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    th, td {
+        padding: 8px; /* Diminui o padding da tabela */
+        font-size: 14px;
+    }
+
+    .actions-section {
+        text-align: center;
+    }
+    .actions-section {
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões à direita */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Força o botão de compartilhar a usar a cor laranja */
+.share-btn {
+    background-color: #ff9800; 
+}
+
+/* Estilização para as mensagens de notificação */
+.message {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.message.success {
+    background-color: #28a745;
+    opacity: 1;
+}
+
+.message.error {
+    background-color: #dc3545;
+    opacity: 1;
+}
+
+.message.warning {
+    background-color: #ff9800;
+    opacity: 1;
+}
+
+/* --- Responsividade (Ajuste para centrar os botões em telas pequenas) --- */
+@media (max-width: 480px) {
+    /* ... [Mantenha a responsividade anterior] ... */
+    
+    .actions-section {
+        flex-direction: column; /* Empilha os botões em telas muito pequenas */
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .actions-section button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+}

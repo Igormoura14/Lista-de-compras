@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras Persistente e Compartilhável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Compras 🛍️</h1>
+
+        <div class="input-section">
+            <input type="text" id="item-input" placeholder="Digite o item da compra...">
+            <button id="add-btn" class="green-btn">Adicionar Item</button>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Concluído</th>
+                        <th>Item</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="shopping-list">
+                    </tbody>
+            </table>
+        </div>
+        
+        <div class="actions-section">
+            <button id="share-btn" class="orange-btn share-btn">Compartilhar Lista</button>
+            <button id="clear-btn" class="orange-btn">Limpar Lista</button>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
